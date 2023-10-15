@@ -15,13 +15,14 @@ nav{
     background-color: rgb(47, 71, 117);
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+
+}
+nav p{
+    margin-bottom:30px ;
 }
 .titulo{
     display: flex;
     background-color: cornflowerblue;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    margin-top: 30px;
     align-items: center;
 }
 .titulo h2{
@@ -43,7 +44,7 @@ button{
     display: flex;
     flex-direction: column;
 }
-.links input{
+.links input, select{
     border: none;
     height:45px;
     border-radius: 5px;
@@ -52,7 +53,7 @@ button{
     margin-bottom: 15px;
     display: none;
 }
-.links input.active{
+.links input.active, select.active{
     display: flex;
 }
 
