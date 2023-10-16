@@ -12,7 +12,6 @@
 <body>
     <nav>
         {% for categoria in categorias %}
-            {% for  l  in link %}
         <div class="categoria">
             <div class="titulo">
                 <h2>{{categoria.nome}}</h2>
@@ -20,13 +19,12 @@
         
         </div>
 
-        {% for l in link %}
-        {% if l.categoria.id == categoria.id %}
-        <p>{{l.nome}}</p>
-        {% endif %}
-        {% endfor %}
+                {% for l in link %}
+                {% if l.categoria.id == categoria.id %}
+                    <p>{{l.nome}}</p>
+                {% endif %}
+                {% endfor %}
         
-            {% endfor %}
         {% endfor %}
     </nav>
 
@@ -47,9 +45,9 @@
         {% endif %}
         <form action="{% url "dados" %}" method="POST"> {% csrf_token %}
             <div class="links">
-                <input type="text" id="name" name="name" placeholder="Nome do site" required>
-                <input type="text" id="description" name="description" placeholder="Descrição do site" required > 
-                <input type="url" placeholder="Link do site" name="link" id="link" required >
+                <input type="text" id="name" name="name" placeholder="Nome do site" required autocomplete="off">
+                <input type="text" id="description" name="description" placeholder="Descrição do site" required autocomplete="off"> 
+                <input type="url" placeholder="Link do site" name="link" id="link" required autocomplete="off">
                 <select name="categorias" id="categorias">
                     {% for categoria in categorias %}
                         <option value="{{categoria.id}}">{{categoria.nome}}</option>
