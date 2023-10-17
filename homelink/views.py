@@ -7,8 +7,11 @@ def home(request):
     if request.method == "GET":
         link_user = Links.objects.all()
         categorias = Categorias.objects.all()
+        is_user_staff = request.user.is_staff
         
-        return render(request, 'index.html', {'link': link_user, 'categorias': categorias})
+            
+        
+        return render(request, 'index.html', {'link': link_user, 'categorias': categorias, 'is_user_staff': is_user_staff})
 
 def pegar_dados(request):
     if request.method == "POST":
@@ -33,7 +36,8 @@ def info(request, id_name):
     link_user = Links.objects.all()
     categorias = Categorias.objects.all()
     link = Links.objects.filter(id=id_name)
+    is_user_staff = request.user.is_staff
     
-    return render(request, 'index.html', {'link': link_user, 'categorias': categorias, 'infos': link})
+    return render(request, 'index.html', {'link': link_user, 'categorias': categorias, 'infos': link, 'is_user_staff': is_user_staff})
 
     

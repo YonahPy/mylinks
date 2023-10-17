@@ -36,13 +36,15 @@
             </nav>
             
             
-                <main>
+        <main>
+            {% if is_user_staff %}
             <div class="buttons">
                 <button id="add" class="material-symbols-outlined">add</button>
             
                 <button id="delete"  class="material-symbols-outlined">delete</button>
                 <button id="edit"  class="material-symbols-outlined">edit</button>
             </div>
+            {% endif %}
             {% if messages %}
                 <ul class="messages">
                     {% for message in messages %}
