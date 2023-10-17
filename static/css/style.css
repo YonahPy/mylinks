@@ -6,31 +6,56 @@
     list-style: none;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+:root{
+    --Couro-Antigo: #8B4513;
+    --Madeira-Rica: #8B4513;
+    --Verde-Escuro: #006400;
+    --Marfim: #FFF8DC;
+    --Borgonha: #490101;
+    --Dourado: #D4AF37;
+}
+
 body{
     display: flex;
-    background-color: aquamarine;
-
 }
 nav{
 
     width: 30vw;
-    background-color: rgb(47, 71, 117);
+    border: 5px solid var(--Borgonha);
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-
+    margin-left: 10px;
+    
 }
-nav p{
-    margin-bottom:30px ;
+.line{
+    background-color:var(--Borgonha) ;
+    width: 100%;
+    height: 3px;
+}
+.name{
+    height: 3%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+.name a{
+    font-size: 18px;
+    margin-left: 15px;
+    color: var(--Borgonha);
 }
 .titulo{
     display: flex;
-    background-color: cornflowerblue;
+    background-color: var(--Borgonha);
     align-items: center;
+    color: rgb(146, 140, 140);
+
 }
 .titulo h2{
-    margin-left: 10px;
-    padding: 5px;
-    margin-right: 15px;
+    margin-left: 15px;
+    padding-block: 5px;
+    font-size: 28px;
+    font-family: 'kel';
 }
 button{
     height: 30px;
@@ -54,6 +79,7 @@ button{
     width: 50%;
     margin-bottom: 15px;
     display: none;
+    background-color: rgb(236, 230, 230);
 }
 .links input.active, select.active{
     display: flex;
@@ -69,10 +95,36 @@ button{
     background-color: darkcyan;
     color: white;
     cursor: pointer;
+    text-align: center;
+    font-size: 17px;
 }
 
 main{
-    background-color: aquamarine;
+
     width: 70vw;
    
+}
+
+.info{
+    margin: 50px;
+    text-align: center;
+}
+.info h2{
+    margin-bottom: 25px;
+    color: #490101;
+    font-size: 35px;
+}
+.info p{
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+.info a{
+    color: #490101;
+    font-weight: bold;
+}
+.name{
+
+}
+.nome-site{
+ 
 }

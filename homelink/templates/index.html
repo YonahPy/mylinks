@@ -9,24 +9,28 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-<body>
-    <nav>
-        {% for categoria in categorias %}
-        <div class="categoria">
-            <div class="titulo">
-                <h2>{{categoria.nome}}</h2>
-            </div>
-        
-        </div>
+<body> 
+        <nav>
 
-                {% for l in link %}
-                {% if l.categoria.id == categoria.id %}
-                    <p>{{l.nome}}</p>
-                {% endif %}
-                {% endfor %}
+            {% for categoria in categorias %}
+            <div class="categoria">
+                <div class="titulo">
+                    <h2>{{categoria.nome}}</h2>
+                </div>
         
-        {% endfor %}
-    </nav>
+            </div>
+                    {% for l in link %}
+                    {% if l.categoria.id == categoria.id %}
+                        <div class="name">
+                            <a href="{% url 'info' l.id %}" class="nome-site">{{l.nome}}</a>
+                        </div>
+                        <div class="line"></div>
+                    {% endif %}
+                    {% endfor %}
+        
+            {% endfor %}
+        </nav>
+
 
     <main>
         <div class="buttons">
@@ -60,7 +64,14 @@
         </form>
 
         <section class="main-section">
+            <div class="info">
+                {% for info in infos %}
+                <h2 >{{info.nome}}</h2>
+                <p>{{info.descricao}}</p>
+                <a href="{{info.links}}" target="_blank">Link para {{info.nome}}</a>
 
+                {% endfor %}
+            </div>
         </section>
     </main>
 

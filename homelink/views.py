@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Links, Categorias
+from django.http import HttpResponse
 
 
 def home(request):
@@ -27,3 +28,12 @@ def pegar_dados(request):
         )
         link_usuario.save()
         return redirect('/')
+
+def info(request, id_name):
+    link_user = Links.objects.all()
+    categorias = Categorias.objects.all()
+    link = Links.objects.filter(id=id_name)
+    
+    return render(request, 'index.html', {'link': link_user, 'categorias': categorias, 'infos': link})
+
+    
