@@ -16,46 +16,60 @@
     --Dourado: #D4AF37;
 }
 
-body{
+.geral{
     display: flex;
 }
 nav{
-
     width: 30vw;
-    border: 5px solid var(--Borgonha);
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    margin-left: 10px;
-    
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 5px  rgba(0, 0, 0, 0.205);
 }
 .line{
-    background-color:var(--Borgonha) ;
-    width: 100%;
-    height: 3px;
+    background-color:black;
+    width: 80%;
+    height: 1px;
+    margin-bottom: 10px;
+    margin-left: 40px;
 }
+.line2{
+    background-color:crimson;
+    width: 100%;
+    height: 1px;
+    margin-bottom: 10px;
+}
+
 .name{
-    height: 3%;
+    height: 6%;
     display: flex;
-    align-items: center;
-    background-color: white;
+    justify-content: center;
+    flex-direction: column;
+
+
 }
 .name a{
     font-size: 18px;
-    margin-left: 15px;
+    margin-left: 40px;
     color: var(--Borgonha);
 }
+.name{
+    display: none;
+}
+
 .titulo{
     display: flex;
-    background-color: var(--Borgonha);
-    align-items: center;
-    color: rgb(146, 140, 140);
-
+    justify-content: center;
+    color: crimson;
+    flex-direction: column;
+    
 }
 .titulo h2{
     margin-left: 15px;
     padding-block: 5px;
-    font-size: 28px;
-    font-family: 'kel';
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 button{
     height: 30px;
@@ -100,9 +114,7 @@ button{
 }
 
 main{
-
     width: 70vw;
-   
 }
 
 .info{
@@ -121,10 +133,4 @@ main{
 .info a{
     color: #490101;
     font-weight: bold;
-}
-.name{
-
-}
-.nome-site{
- 
 }
