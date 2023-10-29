@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 from homelink import views
 
 
@@ -25,3 +27,5 @@ urlpatterns = [
     path('dados/', views.pegar_dados, name='dados'),
     path('info/<int:id_name>/', views.info, name='info'),
 ]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
